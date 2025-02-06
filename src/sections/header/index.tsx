@@ -27,10 +27,14 @@ export default function Header() {
             href="https://ramazandogna.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="link-effect flex! items-center gap-2"
+            className="link-effect flex! items-center gap-2 relative group"
           >
             <img src={icons.site} alt="site Icon" className="mr-2" />
             ramazandogna.com
+            <span className="tooltip transition-all absolute left-full ml-2 hidden group-hover:block bg-gray-700 text-white text-sm p-2 rounded">
+              Years ago, I accidentally wrote my last name as "Dogna" instead of "Dogan," and since
+              then, I've been using it that way on all my social media accounts.
+            </span>
           </a>
         </div>
         <div className="flex">

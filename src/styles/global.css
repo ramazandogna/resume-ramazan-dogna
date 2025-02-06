@@ -57,3 +57,23 @@ h3 {
 .link-effect:hover::after {
   opacity: 1;
 }
+
+.tooltip {
+  max-width: 200px; /* Tooltip genişliğini sınırlayın */
+  white-space: normal; /* Metnin birden fazla satıra geçmesine izin verin */
+  overflow: hidden; /* Taşan metni gizleyin */
+  text-overflow: ellipsis; /* Taşan metin için üç nokta gösterin */
+  background-color: #4a5568; /* Tooltip arka plan rengi */
+  color: white; /* Metin rengi */
+  padding: 0.5rem; /* İç boşluk */
+  border-radius: 0.25rem; /* Kenar yuvarlama */
+  position: absolute; /* Konumlandırma */
+  left: 100%; /* Sağda görünmesi için */
+  margin-left: 0.5rem; /* Boşluk */
+  display: none; /* Varsayılan olarak gizli */
+  width: 100%;
+}
+
+.group:hover .tooltip {
+  display: block; /* Hover durumunda görünür hale getir */
+}
