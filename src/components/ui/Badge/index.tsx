@@ -11,19 +11,19 @@ export default function Badge({ children, size = 'small', variant = 'gray' }: Ba
   };
 
   const variantClasses = {
-    'dark-green': 'bg-[#68A063]/80 text-white', // Node.js yeşili
-    'lite-green': 'bg-[#00DC82]/80 text-black', // Nuxt.js yeşili
-    black: 'bg-[#000000]/80 text-white', // Next.js siyahı
-    blue: 'bg-[#61DAFB]/80 text-black', // React mavisi
-    yellow: 'bg-[#FFD700]/80 text-black', // Yıldırım sarısı
-    gray: 'bg-[#708090]/80 text-white' // Duman grisi
+    'dark-green': 'bg-[#68A063]/75 text-white', // Node.js yeşili
+    'lite-green': 'bg-[#00DC82]/75 text-black', // Nuxt.js yeşili
+    black: 'bg-[#000000]/75 text-white', // Next.js siyahı
+    blue: 'bg-[#61DAFB]/75 text-black', // React mavisi
+    yellow: 'bg-[#FFD700]/75 text-black', // Yıldırım sarısı
+    gray: 'bg-[#708090]/75 text-white' // Duman grisi
   };
 
   return (
     <span
       className={`
         inline-flex items-center justify-center 
-        rounded-full font-medium
+        rounded-full cursor-grab
         ${sizeClasses[size]}
         ${variantClasses[variant]}
       `}

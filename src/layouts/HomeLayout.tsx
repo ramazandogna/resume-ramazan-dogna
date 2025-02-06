@@ -9,7 +9,7 @@ import WorkExperiences from '../sections/workExperiences';
 export default function HomeLayout() {
   return (
     <div className="flex flex-col">
-      <Paper pageNumber={1}>
+      <Paper>
         <div className="flex flex-col gap-24px">
           <Header />
           <About />

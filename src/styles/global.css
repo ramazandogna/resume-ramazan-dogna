@@ -8,3 +8,52 @@ h3 {
   font-size: 16px;
   font-weight: 500;
 }
+
+.hover-wrapper {
+  transition: all 0.3s ease;
+}
+
+.hover-container:hover .hover-wrapper:not(:hover) {
+  filter: blur(5px);
+  opacity: 0.5;
+}
+
+.hover-wrapper:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Badge Hover Effects */
+.badge-container:hover .badge:not(:hover) {
+  filter: blur(3px);
+  opacity: 0.5;
+}
+
+.badge {
+  transition: all 0.3s ease;
+}
+
+.link-effect {
+  position: relative;
+  display: inline-block;
+  transition:
+    transform 0.3s ease,
+    color 0.3s ease;
+}
+
+.link-effect::after {
+  content: '→'; /* İleride ikon ile değiştirebilirsiniz */
+  position: absolute;
+  right: -15px; /* Sağ tarafa doğru yerleştirin */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.link-effect:hover {
+  transform: scale(1.05);
+  color: #007bff; /* İsteğe bağlı: hover rengi */
+}
+
+.link-effect:hover::after {
+  opacity: 1;
+}

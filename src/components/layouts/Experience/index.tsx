@@ -1,37 +1,30 @@
 import Badge from '../../ui/Badge';
-import ExperienceType from '../../../Data/data';
+import ExperienceType from '../../../data/data';
 
 interface ExperienceProps {
   experience: ExperienceType;
 }
 
 export default function Experience({ experience }: ExperienceProps) {
-  const { company, companyLink, date, title, responsibilities, technologies } = experience;
-
   return (
-    <div className="w-full flex flex-col gap-10px">
-      <div className="flex justify-between items-center">
-        <a
-          className="transition-all hover:opacity-40 active:opacity-100"
-          href={companyLink}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h3>{company}</h3>
-        </a>
-        <div>{date}</div>
+    <div className="flex flex-col gap-2">
+      <div className="flex flex-col">
+        <h3>{experience.title}</h3>
+        <p>{experience.company}</p>
+        <p>{experience.date}</p>
       </div>
-      <div>{title}</div>
-      <ul>
-        {responsibilities.map((responsibility, index) => (
+      <ul className="list-disc pl-4">
+        {experience.responsibilities.map((responsibility, index) => (
           <li key={index}>{responsibility}</li>
         ))}
       </ul>
-      <div className="flex flex-wrap gap-2">
-        {technologies.map((tech, index) => (
-          <Badge key={index} variant={tech.variant}>
-            {tech.name}
-          </Badge>
+      <div className="badge-container flex flex-wrap gap-2">
+        {experience.technologies.map((tech, index) => (
+          <span key={index} className="badge">
+            <Badge variant={tech.variant} size="small">
+              {tech.name}
+            </Badge>
+          </span>
         ))}
       </div>
     </div>
