@@ -4,7 +4,7 @@ export default function Header() {
       <h2 className="text-2xl font-400 uppercase text-32px">
         Ramazan <span className="font-bold">Doğan</span>
       </h2>
-      <div className="text-16px font-400">Frontend Developer</div>
+      <h3>Frontend Developer</h3>
       <div className="w-full grid sm:grid-cols-2 grid-cols-1 gap-2">
         <div>Türkiye</div>
         <div>
