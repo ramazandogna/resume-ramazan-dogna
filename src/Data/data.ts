@@ -10,6 +10,32 @@ export default interface ExperienceType {
   }>;
 }
 
+type BadgeVariant = 'blue' | 'lite-green' | 'black' | 'dark-green' | 'gray' | 'yellow';
+type BadgeSize = 'small' | 'normal';
+
+interface Skill {
+  name: string;
+  variant: BadgeVariant;
+  size: BadgeSize;
+}
+
+export const skillsData: Skill[] = [
+  { name: 'React.js', variant: 'blue', size: 'normal' },
+  { name: 'Vue.js', variant: 'lite-green', size: 'normal' },
+  { name: 'Next.js', variant: 'black', size: 'normal' },
+  { name: 'Nuxt.js', variant: 'lite-green', size: 'normal' },
+  { name: 'Node.js', variant: 'dark-green', size: 'normal' },
+  { name: 'Express.js', variant: 'dark-green', size: 'normal' },
+  { name: 'MongoDB', variant: 'dark-green', size: 'normal' },
+  { name: 'TailwindCSS', variant: 'blue', size: 'normal' },
+  { name: 'UnoCSS', variant: 'black', size: 'normal' },
+  { name: 'SCSS', variant: 'blue', size: 'normal' },
+  { name: 'Agile', variant: 'gray', size: 'normal' },
+  { name: 'Scrum', variant: 'gray', size: 'normal' },
+  { name: 'GitHub Actions', variant: 'gray', size: 'normal' },
+  { name: 'Docker', variant: 'blue', size: 'normal' }
+];
+
 export const experienceData: ExperienceType[] = [
   {
     company: 'Efilli',
