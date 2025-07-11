@@ -1,50 +1,57 @@
-# React + TypeScript + Vite
+# Ramazan Doğan - Personal Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a modern and functional portfolio website published at [ramazandogna.com](https://ramazandogna.com/). The goal is to professionally showcase my software experience, projects, and technical skills.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Technologies:** React.js, TypeScript, Vite, UnoCSS, TailwindCSS, Redux Toolkit, Framer Motion, SCSS
+- **Structure:** Component-based, scalable, and clean code architecture
+- **Theme:** Minimalist, fast, and user-focused interface
 
-## Expanding the ESLint configuration
+## Main Sections
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **About:** Short bio and technical focus
+- **Experience:** Companies, roles, and technologies used
+- **Projects:** Highlighted projects, brief descriptions, and technologies
+- **Skills:** Main frontend and backend technologies I use
+- **Education & Languages:** Academic background and language proficiency
+- **Contact:** Email, phone, and personal website
 
-- Configure the top-level `parserOptions` property like this:
+## Featured Projects
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname
-    }
-  }
-});
+- **Automated Data Scraping & Processing Service:** Scalable data collection service with Node.js, Express.js, Puppeteer, and MongoDB.
+- **Rei Dashboard:** Dynamic data management panel with React.js and Redux Toolkit.
+- **Element Capturer:** Vue.js-based browser extension for UI designers to capture HTML & CSS.
+- **RD Task Manager:** Rapidly developed task management app with React.js ([Demo](https://rd-task-manager.vercel.app/)).
+
+## Installation & Run
+
+```bash
+pnpm install
+pnpm dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Folder Structure (src/)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react';
+- **components/**: UI and layout components
+- **sections/**: Page sections (about, projects, experience, etc.)
+- **Data/**: Experience, project, and skill data
+- **styles/**: Global and custom CSS files
+- **layouts/**: Page layouts
+- **pages/**: Main and error pages
+- **routers/**: React Router configuration
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules
-  }
-});
-```
+## Features
+
+- Fully functional, responsive, and fast
+- Modern animations and interactions
+- Easy data update (add experience/project in a single file)
+- Open source, customizable structure
+
+---
+
+Feel free to contact me for any suggestions or contributions.
+
+I have designed and developed this entire structure. Please contact me before using it 🙂
+
+Ramazan Doğan
