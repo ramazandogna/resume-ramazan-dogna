@@ -9,7 +9,13 @@ export default function Header() {
       </h2>
       <h3>Frontend Developer</h3>
       <div className="w-full grid sm:grid-cols-2 grid-cols-1 gap-2">
-        <div>Türkiye</div>
+        <div className='flex items-center'>
+          <img
+          src={icons.location}
+          alt="location Icon"
+          className=" mr-2"
+          />
+          Türkiye</div>
         <div className="flex">
           <a href="mailto:doganrmzn40@gmail.com" className="link-effect flex! items-center gap-2">
             <img src={icons.mail} alt="mail Icon" className="mr-2" />

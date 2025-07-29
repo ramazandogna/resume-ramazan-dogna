@@ -24,16 +24,30 @@ export const skillsData: Skill[] = [
   { name: 'Vue.js', variant: 'lite-green', size: 'normal' },
   { name: 'Next.js', variant: 'black', size: 'normal' },
   { name: 'Nuxt.js', variant: 'lite-green', size: 'normal' },
+  { name: 'TypeScript', variant: 'blue', size: 'normal' },
+  { name: 'JavaScript', variant: 'yellow', size: 'normal' },
   { name: 'Node.js', variant: 'dark-green', size: 'normal' },
   { name: 'Express.js', variant: 'dark-green', size: 'normal' },
   { name: 'MongoDB', variant: 'dark-green', size: 'normal' },
   { name: 'TailwindCSS', variant: 'blue', size: 'normal' },
   { name: 'UnoCSS', variant: 'black', size: 'normal' },
   { name: 'SCSS', variant: 'blue', size: 'normal' },
+  { name: 'Redux Toolkit', variant: 'black', size: 'normal' },
+  { name: 'Context API', variant: 'blue', size: 'normal' },
+  { name: 'Vuex', variant: 'lite-green', size: 'normal' },
+  { name: 'Jest', variant: 'gray', size: 'normal' },
+  { name: 'Vitest', variant: 'gray', size: 'normal' },
+  { name: 'Puppeteer', variant: 'blue', size: 'normal' },
+  { name: 'Chrome Extensions', variant: 'gray', size: 'normal' },
+  { name: 'Web Scraping', variant: 'gray', size: 'normal' },
+  { name: 'SSR/CSR/SSG/ISR', variant: 'black', size: 'normal' },
+  { name: 'SEO', variant: 'gray', size: 'normal' },
   { name: 'Agile', variant: 'gray', size: 'normal' },
   { name: 'Scrum', variant: 'gray', size: 'normal' },
   { name: 'GitHub Actions', variant: 'gray', size: 'normal' },
-  { name: 'Docker', variant: 'blue', size: 'normal' }
+  { name: 'Docker', variant: 'blue', size: 'normal' },
+  { name: 'Nginx', variant: 'gray', size: 'normal' },
+  { name: 'Git', variant: 'gray', size: 'normal' }
 ];
 
 export const experienceData: ExperienceType[] = [
@@ -141,6 +155,28 @@ export const experienceData: ExperienceType[] = [
 
 export const projectData: ExperienceType[] = [
   {
+    company: 'Personal Project',
+    companyLink: 'https://pek-afilli.vercel.app/',
+    date: 'Completed',
+    title: 'Pek Afilli Blog Platform',
+    responsibilities: [
+      'Developed a modern, SEO-friendly blog platform using Next.js 14 with Incremental Static Regeneration (ISR).',
+      'Integrated GraphQL for efficient data fetching and WordPress CMS for content management.',
+      'Implemented responsive design with TailwindCSS and engaging animations with Framer Motion.',
+      'Optimized performance with code splitting, lazy loading, and SEO best practices.',
+      'Built state management with Redux Toolkit for seamless user experience.'
+    ],
+    technologies: [
+      { name: 'Next.js', variant: 'black' },
+      { name: 'React.js', variant: 'blue' },
+      { name: 'Redux Toolkit', variant: 'black' },
+      { name: 'TailwindCSS', variant: 'blue' },
+      { name: 'Framer Motion', variant: 'blue' },
+      { name: 'GraphQL', variant: 'blue' },
+      { name: 'WordPress CMS', variant: 'gray' }
+    ]
+  },
+  {
     company: 'Company Project',
     companyLink: 'No Public Link Available',
     date: 'Ongoing',
@@ -148,8 +184,9 @@ export const projectData: ExperienceType[] = [
     responsibilities: [
       'Developed a scalable web scraping service using Node.js, Express.js, Puppeteer, and MongoDB.',
       'Dynamically determined scraping conditions, filtered, and ranked data based on accuracy.',
-      'Processed over 1,000 records efficiently.',
-      'Hosted on a self-managed server using SSL, SSH, Nginx, and Docker.'
+      'Processed over 1,000 records efficiently with automated data validation.',
+      'Hosted on a self-managed server using SSL, SSH, Nginx, and Docker for production deployment.',
+      'Implemented error handling and retry mechanisms for robust data collection.'
     ],
     technologies: [
       { name: 'Node.js', variant: 'dark-green' },
@@ -161,32 +198,16 @@ export const projectData: ExperienceType[] = [
     ]
   },
   {
-    company: 'Company Project',
-    companyLink: 'No Public Link Available',
-    date: 'Ongoing',
-    title: 'Rei Dashboard',
-    responsibilities: [
-      'Developed a full-stack web application to manage structured data retrieved from the Automated Data Scraping Service.',
-      'Built the frontend with React.js, Redux Toolkit, Framer Motion, and UnoCSS.',
-      'Designed an interactive and responsive user experience for dynamically managing datasets.'
-    ],
-    technologies: [
-      { name: 'React.js', variant: 'blue' },
-      { name: 'Redux Toolkit', variant: 'black' },
-      { name: 'Framer Motion', variant: 'blue' },
-      { name: 'UnoCSS', variant: 'black' }
-    ]
-  },
-  {
     company: 'Senior Capstone Project',
-    companyLink: 'No Public Link Available',
+    companyLink: 'https://drive.google.com/file/d/1JOHsRPW40tNMj3wU_8u6WtUYB2sTJ8ed/view?usp=sharing',
     date: 'Completed',
     title: 'Element Capturer',
     responsibilities: [
       'Developed a browser extension that allows UI designers to dynamically extract and save HTML & CSS components.',
       'Captured user-selected areas, extracted DOM elements, and stored them in a full-stack application.',
       'Built using Vue.js, TypeScript, UnoCSS, MongoDB, Express.js, and Node.js.',
-      'Enabled saving, organizing, and sharing of UI elements for collaborative development.'
+      'Enabled saving, organizing, and sharing of UI elements for collaborative development.',
+      'Published academic paper documenting the research methodology and implementation details.'
     ],
     technologies: [
       { name: 'Vue.js', variant: 'lite-green' },
@@ -201,19 +222,40 @@ export const projectData: ExperienceType[] = [
     ]
   },
   {
+    company: 'Company Project',
+    companyLink: 'https://rei-dashboard-client.vercel.app/',
+    date: 'Ongoing',
+    title: 'Rei Dashboard',
+    responsibilities: [
+      'Developed a full-stack web application to manage structured data retrieved from the Automated Data Scraping Service.',
+      'Built the frontend with React.js, Redux Toolkit, Framer Motion, and UnoCSS.',
+      'Designed an interactive and responsive user experience for dynamically managing datasets.',
+      'Implemented real-time data visualization and filtering capabilities.',
+      'Created modular component architecture for scalable development.'
+    ],
+    technologies: [
+      { name: 'React.js', variant: 'blue' },
+      { name: 'Redux Toolkit', variant: 'black' },
+      { name: 'Framer Motion', variant: 'blue' },
+      { name: 'UnoCSS', variant: 'black' }
+    ]
+  },
+  {
     company: 'Personal Project',
-    companyLink: 'RD Task Manager',
+    companyLink: 'https://rd-task-manager.vercel.app/',
     date: 'Completed',
     title: 'RD Task Manager',
     responsibilities: [
       'Developed a task management app in 2 hours to test Cursor IDE capabilities.',
       'Designed an interactive UI with drag-and-drop and click-based transitions.',
-      'Implemented task organization into To-Do, In Progress, and Completed sections.'
+      'Implemented task organization into To-Do, In Progress, and Completed sections.',
+      'Built responsive design with TailwindCSS and smooth animations with Framer Motion.',
+      'Integrated data visualization with Recharts for task analytics.'
     ],
     technologies: [
       { name: 'React.js', variant: 'blue' },
       { name: 'Redux Toolkit', variant: 'black' },
-      { name: 'Tailwind CSS', variant: 'blue' },
+      { name: 'TailwindCSS', variant: 'blue' },
       { name: 'Framer Motion', variant: 'blue' },
       { name: 'Recharts', variant: 'blue' }
     ]
@@ -233,10 +275,26 @@ interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: 'Pek Afilli Blog Platform',
+    description:
+      'A modern, SEO-friendly blog platform powered by Next.js 14 with Incremental Static Regeneration (ISR), TailwindCSS, and GraphQL. Content is managed via WordPress CMS, featuring optimized performance and seamless content delivery.',
+    linkText: 'View Project',
+    linkUrl: 'https://pek-afilli.vercel.app/',
+    technologies: [
+      { name: 'Next.js', variant: 'black' },
+      { name: 'React.js', variant: 'blue' },
+      { name: 'Redux Toolkit', variant: 'black' },
+      { name: 'TailwindCSS', variant: 'blue' },
+      { name: 'Framer Motion', variant: 'blue' },
+      { name: 'GraphQL', variant: 'blue' },
+      { name: 'WordPress CMS', variant: 'gray' }
+    ]
+  },
+  {
     title: 'Automated Data Scraping & Processing Service',
     description:
       'A scalable web scraping service built with Node.js, Express.js, Puppeteer, and MongoDB. Dynamically determines scraping conditions, filters and ranks data based on accuracy, and processes 1,000+ records. Hosted on a self-managed server using SSL, SSH, Nginx, and Docker.',
-    linkText: 'View Project',
+    linkText: 'Company Project',
     linkUrl: '',
     technologies: [
       { name: 'Node.js', variant: 'dark-green' },
@@ -248,22 +306,9 @@ export const projectsData: Project[] = [
     ]
   },
   {
-    title: 'Rei Dashboard',
-    description:
-      'A full-stack web application built using the Automated Data Scraping Service. Users can request datasets and retrieve structured information. The frontend is developed with React.js, Redux Toolkit, Framer Motion, and UnoCSS, ensuring a responsive and interactive experience.',
-    linkText: 'View Project',
-    linkUrl: '',
-    technologies: [
-      { name: 'React.js', variant: 'blue' },
-      { name: 'Redux Toolkit', variant: 'black' },
-      { name: 'Framer Motion', variant: 'blue' },
-      { name: 'UnoCSS', variant: 'black' }
-    ]
-  },
-  {
     title: 'Element Capturer',
     description:
-      'A browser extension & full-stack system that allows UI designers to dynamically extract and save HTML & CSS components. Captured elements are stored in a full-stack app built with Vue.js, TypeScript, UnoCSS, MongoDB, Express.js, and Node.js.',
+      'A browser extension & full-stack system that allows UI designers to dynamically extract and save HTML & CSS components. Captured elements are stored in a full-stack app built with Vue.js, TypeScript, UnoCSS, MongoDB, Express.js, and Node.js. My senior capstone project.',
     linkText: 'Academic Paper',
     linkUrl: 'https://drive.google.com/file/d/1JOHsRPW40tNMj3wU_8u6WtUYB2sTJ8ed/view?usp=sharing',
     technologies: [
@@ -279,15 +324,28 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    title: 'Rei Dashboard',
+    description:
+      'A full-stack web application built to manage structured data retrieved from the Automated Data Scraping Service. The frontend is developed with React.js, Redux Toolkit, Framer Motion, and UnoCSS, ensuring a responsive and interactive experience.',
+    linkText: 'View Project',
+    linkUrl: 'https://rei-dashboard-client.vercel.app/',
+    technologies: [
+      { name: 'React.js', variant: 'blue' },
+      { name: 'Redux Toolkit', variant: 'black' },
+      { name: 'Framer Motion', variant: 'blue' },
+      { name: 'UnoCSS', variant: 'black' }
+    ]
+  },
+  {
     title: 'RD Task Manager',
     description:
-      'A task management app built in 2 hours to test Cursor IDE. Tasks are organized into To-Do, In Progress, and Completed sections with drag-and-drop and click-based transitions. Developed with React.js, Redux Toolkit, Tailwind CSS, Framer Motion, and Recharts.',
+      'A task management app built in 2 hours to test Cursor IDE capabilities. Tasks are organized into To-Do, In Progress, and Completed sections with drag-and-drop and click-based transitions. Developed with React.js, Redux Toolkit, TailwindCSS, Framer Motion, and Recharts.',
     linkText: 'View Project',
     linkUrl: 'https://rd-task-manager.vercel.app/',
     technologies: [
       { name: 'React.js', variant: 'blue' },
       { name: 'Redux Toolkit', variant: 'black' },
-      { name: 'Tailwind CSS', variant: 'blue' },
+      { name: 'TailwindCSS', variant: 'blue' },
       { name: 'Framer Motion', variant: 'blue' },
       { name: 'Recharts', variant: 'blue' }
     ]
@@ -302,7 +360,8 @@ interface EducationSection {
 export const educationData: EducationSection = {
   title: 'Education & Languages',
   items: [
-    'Bilecik Şeyh Edebali Üniversitesi – BSc in Computer Science (2019 - 2024) - 3.22',
-    'Turkish (Native), English (Professional Working Proficiency)'
+    'Bilecik Şeyh Edebali Üniversitesi – BSc in Computer Science (2019 - 2024) - GPA: 3.22/4.00',
+    'Turkish (Native), English (Professional Working Proficiency)',
+    'Open to remote work and relocation opportunities'
   ]
 };
