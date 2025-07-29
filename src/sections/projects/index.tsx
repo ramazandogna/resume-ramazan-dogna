@@ -8,7 +8,7 @@ export default function Projects() {
       <SectionTitle title="Projects" />
       <div className="hover-container grid md:grid-cols-2 grid-cols-1 gap-4">
         {projectsData.map((_, index) => (
-          <div key={index} className="hover-wrapper">
+          <div key={index} className="hover-wrapper text-justify">
             <Project projectIndex={index} />
           </div>
         ))}

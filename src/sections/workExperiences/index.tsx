@@ -6,7 +6,7 @@ export default function WorkExperiences() {
   return (
     <section className="flex flex-col gap-4">
       <SectionTitle title="Work Experience" />
-      <div className="hover-container flex flex-col gap-8">
+      <div className="hover-container flex flex-col gap-8 text-justify">
         {experienceData.map((experience, index) => (
           <div key={index} className="hover-wrapper">
             <Experience experience={experience} />

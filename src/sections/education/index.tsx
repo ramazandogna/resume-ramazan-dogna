@@ -7,7 +7,7 @@ export default function Education() {
       <SectionTitle title={educationData.title} />
       <ul className="list-disc pl-4 flex flex-col gap-2 hover-container">
         {educationData.items.map((item, index) => (
-          <li key={index} className="hover-wrapper">
+          <li key={index} className="hover-wrapper text-justify">
             {item}
           </li>
         ))}
