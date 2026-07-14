@@ -4,7 +4,7 @@ This project is a modern and functional portfolio website published at [ramazand
 
 ## Overview
 
-- **Technologies:** React.js, TypeScript, Vite, UnoCSS, TailwindCSS, Redux Toolkit, Framer Motion, SCSS
+- **Technologies:** React.js, TypeScript, Vite, UnoCSS, React Router, SCSS
 - **Structure:** Component-based, scalable, and clean code architecture
 - **Theme:** Minimalist, fast, and user-focused interface
 
@@ -19,10 +19,11 @@ This project is a modern and functional portfolio website published at [ramazand
 
 ## Featured Projects
 
-- **Automated Data Scraping & Processing Service:** Scalable data collection service with Node.js, Express.js, Puppeteer, and MongoDB.
-- **Rei Dashboard:** Dynamic data management panel with React.js and Redux Toolkit.
-- **Element Capturer:** Vue.js-based browser extension for UI designers to capture HTML & CSS.
-- **RD Task Manager:** Rapidly developed task management app with React.js ([Demo](https://rd-task-manager.vercel.app/)).
+- **[Scrape & Compare](https://github.com/ramazandogna/scrape-and-compare):** AI-powered job matching engine (NestJS, Next.js, BullMQ, Redis, Playwright, Google Gemini).
+- **[Local Sales System](https://github.com/ramazandogna/local-sales-system):** Offline-first POS & digital ordering for restaurants (React, Fastify, SQLite, Electron, Socket.IO).
+- **[Japanese C2C Marketplace](https://github.com/ramazandogna/online-2nd-hand):** SEO-first second-hand marketplace (Next.js, Prisma, PostgreSQL, Cloudflare R2, Docker).
+- **[Full-Stack Interview Prep](https://github.com/ramazandogna/computer-science/tree/main/fullstack-interview-prep):** Seven read-every-line projects spanning HTML, JS, Vue, React, Next.js, Express, and NestJS.
+- **[Nihongo Grammar](https://github.com/ramazandogna/nihongo-grammar-n5):** Single-file JLPT N5 & N4 study guide with an interactive quiz engine (vanilla HTML/CSS/JS).
 
 ## Installation & Run
 
