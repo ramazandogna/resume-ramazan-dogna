@@ -6,19 +6,20 @@ export default function About() {
       <SectionTitle title="About" />
       <span className="flex flex-col gap-12px hover-container">
         <p className="hover-wrapper text-justify">
-          I am a Frontend Developer with 2 years of experience in building high-performance,
-          scalable web applications using React.js, Vue.js, and Next.js. While specializing
-          in frontend, I also have experience with Node.js and MongoDB, enabling me to contribute to
-          full-stack projects when needed.
+          Product-driven Full-Stack Developer with over 2 years of professional experience across the
+          TypeScript, React, and Node.js ecosystems. I have a proven track record of architecting
+          scalable microservices and offline-first applications, and I am a strong advocate for Clean
+          Code and YAGNI principles.
         </p>
         <p className="hover-wrapper text-justify">
-          I excel in problem-solving, performance optimization, and UI/UX development, adapting
-          quickly to new technologies and best practices. Contributed to architecture and workflows 
-          in Agile teams to ship scalable, maintainable solutions.
+          I specialize in the frontend with React, Vue, and Next.js, and I am equally comfortable on
+          the backend with NestJS, Node.js, PostgreSQL, and Redis — enabling me to design and ship
+          full-stack, production-ready products end to end.
         </p>
         <p className="hover-wrapper text-justify">
-          Driven by continuous learning and innovation, I stay ahead of industry trends to develop
-          impactful and modern applications.
+          Based in Tokyo on a Student Visa (fully eligible to transition to an Engineering/Humanities
+          working visa), I am currently expanding my technical boundaries with AI-integrated pipelines
+          while actively mastering Japanese.
         </p>
       </span>
     </div>

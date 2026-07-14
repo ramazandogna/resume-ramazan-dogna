@@ -14,7 +14,7 @@ export default function Header() {
               <span className="hover-wrapper">Ramazan</span>{' '}
               <span className="font-bold hover-wrapper">Doğan</span>
             </h2>
-            <h3 className="text-lg mt-2">Fullstack Developer</h3>
+            <h3 className="text-lg mt-2">Software Engineer</h3>
           </div>
           
           {/* Contact Information - Bottom Left */}
@@ -25,7 +25,7 @@ export default function Header() {
               alt="location Icon"
               className=" mr-2"
               />
-              Türkiye</div>
+              Tokyo, Japan</div>
             <div className="flex ">
               <a href="mailto:doganrmzn40@gmail.com" className="link-effect flex! items-center gap-2">
                 <img src={icons.mail} alt="mail Icon" className="mr-2" />
@@ -33,9 +33,9 @@ export default function Header() {
               </a>
             </div>
             <div className="flex">
-              <a href="tel:+905071016179" className="link-effect flex! items-center gap-2">
+              <a href="tel:+819084667554" className="link-effect flex! items-center gap-2">
                 <img src={icons.phone} alt="phone Icon" className="mr-2" />
-                (+90) 507 101 61 79
+                (+81) 90-8466-7554
               </a>
             </div>
             <div className="flex">
