@@ -33,9 +33,9 @@ export default function Header() {
               </a>
             </div>
             <div className="flex">
-              <a href="tel:+819084667554" className="link-effect flex! items-center gap-2">
+              <a href="tel:+819054773317" className="link-effect flex! items-center gap-2">
                 <img src={icons.phone} alt="phone Icon" className="mr-2" />
-                (+81) 90-8466-7554
+                (+81) 90-5477-3317
               </a>
             </div>
             <div className="flex">
