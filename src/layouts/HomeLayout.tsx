@@ -1,4 +1,5 @@
 import Paper from '../components/layouts/Paper';
+import DownloadCV from '../components/ui/DownloadCV';
 import About from '../sections/about';
 import Education from '../sections/education';
 import Header from '../sections/header';
@@ -19,6 +20,7 @@ export default function HomeLayout() {
           <Education />
         </div>
       </Paper>
+      <DownloadCV />
     </div>
   );
 }
