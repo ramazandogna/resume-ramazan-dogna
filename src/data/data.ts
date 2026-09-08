@@ -142,6 +142,80 @@ interface Project {
 
 export const projectsData: Project[] = [
   {
+    title: 'rei-kit — Vue 3 Design System & Shared Runtime',
+    description:
+      "零 — the shared layer extracted out of Hibi once it proved portable: thirteen components, six composables, eight utilities, design tokens and a generic i18n runtime, with Supabase behind its own entry point so apps that skip it never download it. Published to npm with provenance and guarded by a release job that runs a real consumer app's checks before anything ships.",
+    linkText: 'View on GitHub',
+    linkUrl: 'https://github.com/ramazandogna/rei-kit',
+    demoText: 'View on npm',
+    demoUrl: 'https://www.npmjs.com/package/rei-kit',
+    technologies: [
+      { name: 'Vue 3', variant: 'lite-green' },
+      { name: 'TypeScript', variant: 'blue' },
+      { name: 'TailwindCSS', variant: 'blue' },
+      { name: 'Vite', variant: 'yellow' },
+      { name: 'npm', variant: 'gray' },
+      { name: 'GitHub Actions', variant: 'gray' },
+      { name: 'Design Systems', variant: 'gray' }
+    ]
+  },
+  {
+    title: 'Kakehashi — Japanese Course for Turkish Speakers',
+    description:
+      '架け橋 ("the bridge") — a Japanese course that follows the order a language school in Japan actually teaches: the day\'s kanji first, then the words written with those kanji, then the grammar built from those words, then an exam over all of it. 86 days across Kana, N5 and N4, with 414 characters, 1,362 words, 103 grammar points and 2,205 exam questions. Vocabulary is not dealt out evenly — a word lands on the day by which every character in it has been taught, so day two of the alphabet course can already be read rather than recognised. Access is enforced in the database, not the client: a day you have not reached returns no rows at all, exam answers have row-level security on with no read policy, and the grants are cut back to least privilege (55 RLS assertions run in CI).',
+    linkText: 'Open the app',
+    linkUrl: 'https://kakehashi-nihongo.vercel.app',
+    technologies: [
+      { name: 'Vue 3', variant: 'lite-green' },
+      { name: 'TypeScript', variant: 'blue' },
+      { name: 'Supabase', variant: 'dark-green' },
+      { name: 'Postgres RLS', variant: 'gray' },
+      { name: 'rei-kit', variant: 'lite-green' },
+      { name: 'TailwindCSS', variant: 'blue' },
+      { name: 'vite-ssg', variant: 'yellow' },
+      { name: 'Vite', variant: 'yellow' }
+    ]
+  },
+  {
+    title: 'Hibi — Habit & Mood Tracker (PWA)',
+    description:
+      'ひび ("days") — a habit and mood tracker built around three kinds of habit (build, quit, and a 1–5 scale), where every mark can carry a note and the year reads back as a 365-square heatmap. An installable, offline-capable PWA on Vue 3 and Supabase (Postgres + RLS), in four languages, with morning and evening Web Push reminders delivered by a scheduled Postgres job calling an Edge Function — so they arrive with every tab closed.',
+    linkText: 'View on GitHub',
+    linkUrl: 'https://github.com/ramazandogna/hibi',
+    demoText: 'Live app',
+    demoUrl: 'https://hibi-habit.vercel.app',
+    technologies: [
+      { name: 'Vue 3', variant: 'lite-green' },
+      { name: 'TypeScript', variant: 'blue' },
+      { name: 'Supabase', variant: 'dark-green' },
+      { name: 'PostgreSQL', variant: 'blue' },
+      { name: 'TailwindCSS', variant: 'blue' },
+      { name: 'PWA', variant: 'gray' },
+      { name: 'Web Push', variant: 'gray' },
+      { name: 'i18n', variant: 'gray' },
+      { name: 'Vite', variant: 'yellow' }
+    ]
+  },
+  {
+    title: 'Kakei — Personal Finance Tracker (PWA)',
+    description:
+      '家計 ("household accounts") — a money tracker built so the month\'s reckoning is the product: an entry takes under five seconds at the till, and the Month screen prints the sentence that matters ("Konbini · ¥10,000 → ¥8,000 · 20% less"). Month, Ledger, Insights and Profile screens over Vue 3 and Supabase with row-level security, plus fixed monthly entries, five currencies and a configurable month start day for anyone budgeting from payday.',
+    linkText: 'View on GitHub',
+    linkUrl: 'https://github.com/ramazandogna/kakei',
+    demoText: 'Live app',
+    demoUrl: 'https://kakei-money.vercel.app',
+    technologies: [
+      { name: 'Vue 3', variant: 'lite-green' },
+      { name: 'TypeScript', variant: 'blue' },
+      { name: 'Supabase', variant: 'dark-green' },
+      { name: 'PostgreSQL', variant: 'blue' },
+      { name: 'TailwindCSS', variant: 'blue' },
+      { name: 'PWA', variant: 'gray' },
+      { name: 'i18n', variant: 'gray' },
+      { name: 'Vite', variant: 'yellow' }
+    ]
+  },
+  {
     title: 'Scrape & Compare — AI-Powered Job Matching Engine',
     description:
       'An automated, AI-driven platform that scrapes job boards and scores each listing 0–100 against a candidate profile using Google Gemini. I built an asynchronous background-processing microservice with BullMQ and Redis to orchestrate scraping and AI-scoring batches, plus adaptive backoff and dynamic pagination to bypass bot detection (50+ listings per run).',
@@ -189,63 +263,6 @@ export const projectsData: Project[] = [
       { name: 'PostgreSQL', variant: 'blue' },
       { name: 'Cloudflare R2', variant: 'yellow' },
       { name: 'Docker', variant: 'blue' }
-    ]
-  },
-  {
-    title: 'Hibi — Habit & Mood Tracker (PWA)',
-    description:
-      'ひび ("days") — a habit and mood tracker built around three kinds of habit (build, quit, and a 1–5 scale), where every mark can carry a note and the year reads back as a 365-square heatmap. An installable, offline-capable PWA on Vue 3 and Supabase (Postgres + RLS), in four languages, with morning and evening Web Push reminders delivered by a scheduled Postgres job calling an Edge Function — so they arrive with every tab closed.',
-    linkText: 'View on GitHub',
-    linkUrl: 'https://github.com/ramazandogna/hibi',
-    demoText: 'Live app',
-    demoUrl: 'https://hibi-habit.vercel.app',
-    technologies: [
-      { name: 'Vue 3', variant: 'lite-green' },
-      { name: 'TypeScript', variant: 'blue' },
-      { name: 'Supabase', variant: 'dark-green' },
-      { name: 'PostgreSQL', variant: 'blue' },
-      { name: 'TailwindCSS', variant: 'blue' },
-      { name: 'PWA', variant: 'gray' },
-      { name: 'Web Push', variant: 'gray' },
-      { name: 'i18n', variant: 'gray' },
-      { name: 'Vite', variant: 'yellow' }
-    ]
-  },
-  {
-    title: 'Kakei — Personal Finance Tracker (PWA)',
-    description:
-      '家計 ("household accounts") — a money tracker built so the month\'s reckoning is the product: an entry takes under five seconds at the till, and the Month screen prints the sentence that matters ("Konbini · ¥10,000 → ¥8,000 · 20% less"). Month, Ledger, Insights and Profile screens over Vue 3 and Supabase with row-level security, plus fixed monthly entries, five currencies and a configurable month start day for anyone budgeting from payday.',
-    linkText: 'View on GitHub',
-    linkUrl: 'https://github.com/ramazandogna/kakei',
-    demoText: 'Live app',
-    demoUrl: 'https://kakei-money.vercel.app',
-    technologies: [
-      { name: 'Vue 3', variant: 'lite-green' },
-      { name: 'TypeScript', variant: 'blue' },
-      { name: 'Supabase', variant: 'dark-green' },
-      { name: 'PostgreSQL', variant: 'blue' },
-      { name: 'TailwindCSS', variant: 'blue' },
-      { name: 'PWA', variant: 'gray' },
-      { name: 'i18n', variant: 'gray' },
-      { name: 'Vite', variant: 'yellow' }
-    ]
-  },
-  {
-    title: 'rei-kit — Vue 3 Design System & Shared Runtime',
-    description:
-      "零 — the shared layer extracted out of Hibi once it proved portable: thirteen components, six composables, eight utilities, design tokens and a generic i18n runtime, with Supabase behind its own entry point so apps that skip it never download it. Published to npm with provenance and guarded by a release job that runs a real consumer app's checks before anything ships.",
-    linkText: 'View on GitHub',
-    linkUrl: 'https://github.com/ramazandogna/rei-kit',
-    demoText: 'View on npm',
-    demoUrl: 'https://www.npmjs.com/package/rei-kit',
-    technologies: [
-      { name: 'Vue 3', variant: 'lite-green' },
-      { name: 'TypeScript', variant: 'blue' },
-      { name: 'TailwindCSS', variant: 'blue' },
-      { name: 'Vite', variant: 'yellow' },
-      { name: 'npm', variant: 'gray' },
-      { name: 'GitHub Actions', variant: 'gray' },
-      { name: 'Design Systems', variant: 'gray' }
     ]
   },
   {
