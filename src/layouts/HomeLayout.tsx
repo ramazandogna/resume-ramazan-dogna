@@ -11,7 +11,7 @@ export default function HomeLayout() {
   return (
     <div className="flex flex-col">
       <Paper>
-        <div className="flex flex-col gap-24px">
+        <div className="flex flex-col gap-8">
           <Header />
           <About />
           <WorkExperiences />

@@ -91,7 +91,9 @@ h3 {
   color: var(--ink);
 }
 
-/* Square-dot bullet list — replaces list-disc so items can carry padding */
+/* Square-dot bullet list — replaces list-disc so items can carry padding.
+   The dot is positioned off the item's own padding, so the same list works
+   whether its items are quiet `.sub-hover` lines or full `.hover-wrapper` cards. */
 .bullet-list {
   list-style: none;
   padding-left: 0;
@@ -105,13 +107,24 @@ h3 {
 .bullet-list > li::before {
   content: '';
   position: absolute;
-  left: 8px;
-  top: 0.72em;
+  left: var(--bullet-left, 8px);
+  top: calc(var(--bullet-offset, 0px) + 0.72em);
   width: 4px;
   height: 4px;
   border-radius: 1px;
   background-color: currentColor;
   opacity: 0.4;
+}
+
+.bullet-list > li.sub-hover {
+  --bullet-offset: 3px;
+  padding-left: 22px;
+}
+
+.bullet-list > li.hover-wrapper {
+  --bullet-offset: 12px;
+  --bullet-left: 14px;
+  padding-left: 30px;
 }
 
 /* ==========================================================================
@@ -280,6 +293,11 @@ h3 {
   .hover-wrapper {
     margin: 0;
     padding: 10px 12px;
+  }
+  .bullet-list > li.hover-wrapper {
+    --bullet-offset: 10px;
+    --bullet-left: 12px;
+    padding-left: 26px;
   }
   .hover-container:hover .hover-wrapper:not(:hover) {
     filter: none;

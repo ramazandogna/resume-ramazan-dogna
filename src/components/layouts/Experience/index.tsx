@@ -7,18 +7,20 @@ interface ExperienceProps {
 
 export default function Experience({ experience }: ExperienceProps) {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-3">
       <div className="flex flex-col">
         <h3>{experience.title}</h3>
-        <p>{experience.company}</p>
-        <p>{experience.date}</p>
+        <p className="text-[var(--ink-soft)]">{experience.company}</p>
+        <p className="text-13px text-[var(--muted)]">{experience.date}</p>
       </div>
-      <ul className="list-disc pl-4">
+      <ul className="bullet-list sub-hover-container flex flex-col gap-1">
         {experience.responsibilities.map((responsibility, index) => (
-          <li key={index}>{responsibility}</li>
+          <li key={index} className="sub-hover">
+            {responsibility}
+          </li>
         ))}
       </ul>
-      <div className="badge-container flex flex-wrap gap-2">
+      <div className="badge-container flex flex-wrap gap-1.5">
         {experience.technologies.map((tech, index) => (
           <span key={index} className="badge">
             <Badge variant={tech.variant} size="small">
