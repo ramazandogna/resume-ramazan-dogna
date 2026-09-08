@@ -288,7 +288,7 @@ export const educationData: EducationSection = {
   items: [
     'ISI Japanese Language School – Language Certification, Japanese Language & Culture (Apr 2026 - Apr 2028): intensive program focused on daily conversational and professional business Japanese.',
     'Bilecik Şeyh Edebali Üniversitesi – BSc in Computer Science (2019 - 2024) - GPA: 3.22/4.00',
-    'Languages: Turkish (Native), English (Professional Working Proficiency), Japanese (JLPT N4)',
+    'Languages: Turkish (Native), English (Professional Working Proficiency), Japanese (N4-level proficiency, no JLPT certificate yet — sitting the JLPT N3 exam in December 2026)',
     'Available for full-time on-site, hybrid, or remote engineering roles — based in Tokyo, Japan.'
   ]
 };
