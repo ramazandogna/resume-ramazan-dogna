@@ -8,7 +8,7 @@ interface PaperProps {
 
 const Paper: React.FC<PaperProps> = ({ children, pageNumber }) => {
   return (
-    <div className="relative w-full max-w-[210mm] min-h-[240mm] p-[20mm] bg-white border border-gray-300 mb-8 mx-auto">
+    <div className="relative w-full max-w-[1100px] min-h-screen mx-auto my-0 md:my-10 px-5 py-10 sm:px-10 sm:py-12 md:px-16 md:py-16 bg-white border-x-0 md:border border-[var(--line)] rounded-none md:rounded-[var(--radius-page)]">
       {children}
       {pageNumber !== undefined && (
         <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-gray-500 text-sm">

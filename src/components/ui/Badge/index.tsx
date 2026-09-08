@@ -6,24 +6,24 @@ interface BadgeProps {
 
 export default function Badge({ children, size = 'small', variant = 'gray' }: BadgeProps) {
   const sizeClasses = {
-    small: 'text-xs px-2 py-1',
-    normal: 'text-sm px-3 py-1.5'
+    small: 'text-11px px-2 py-1',
+    normal: 'text-12px px-2.5 py-1'
   };
 
   const variantClasses = {
-    'dark-green': 'bg-[#68A063]/75 text-white', // Node.js yeşili
-    'lite-green': 'bg-[#00DC82]/75 text-black', // Nuxt.js yeşili
-    black: 'bg-[#000000]/75 text-white', // Next.js siyahı
-    blue: 'bg-[#61DAFB]/75 text-black', // React mavisi
-    yellow: 'bg-[#FFD700]/75 text-black', // Yıldırım sarısı
-    gray: 'bg-[#708090]/75 text-white' // Duman grisi
+    'dark-green': 'bg-[#68A063] text-white', // Node.js green
+    'lite-green': 'bg-[#00DC82] text-black', // Nuxt.js green
+    black: 'bg-[#1F2328] text-white', // Next.js black
+    blue: 'bg-[#61DAFB] text-black', // React blue
+    yellow: 'bg-[#FFD700] text-black', // Lightning yellow
+    gray: 'bg-[#708090] text-white' // Slate gray
   };
 
   return (
     <span
       className={`
-        inline-flex items-center justify-center 
-        rounded-full cursor-grab
+        inline-flex items-center justify-center
+        rounded-[var(--radius-badge)] cursor-default leading-none
         ${sizeClasses[size]}
         ${variantClasses[variant]}
       `}
