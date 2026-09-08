@@ -4,7 +4,7 @@ export default function About() {
   return (
     <div className="flex flex-col">
       <SectionTitle title="About" />
-      <span className="flex flex-col gap-12px hover-container">
+      <span className="flex flex-col gap-1 hover-container">
         <p className="hover-wrapper text-justify">
           Product-driven Full-Stack Developer with over 2 years of professional experience across
           the TypeScript, React, and Node.js ecosystems. I have a proven track record of

@@ -10,15 +10,14 @@ export default function Header() {
         <div className="flex flex-col justify-between flex-1">
           {/* Name and Title - Top Left */}
           <div className="mb-6 md:mb-4">
-            <h2 className="text-42px font-400 uppercase text-32px hover-container">
-              <span className="hover-wrapper">Ramazan</span>{' '}
-              <span className="font-bold hover-wrapper">Doğan</span>
+            <h2 className="text-32px md:text-42px font-300 uppercase tracking-[0.02em]">
+              Ramazan <span className="font-600">Doğan</span>
             </h2>
             <h3 className="text-lg mt-2 text-[var(--ink-soft)]">Software Engineer</h3>
           </div>
 
           {/* Contact Information - Bottom Left */}
-          <div className="grid text-13px grid-cols-1 sm:grid-cols-2 gap-2">
+          <div className="grid text-13px grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-[var(--ink-soft)]">
             <div className="flex items-center">
               <img src={icons.location} alt="location Icon" className=" mr-2" />
               Tokyo, Japan
