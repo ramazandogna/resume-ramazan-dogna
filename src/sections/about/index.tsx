@@ -13,8 +13,8 @@ export default function About() {
         </p>
         <p className="hover-wrapper text-justify">
           I specialize in the frontend with React, Vue, and Next.js, and I am equally comfortable on
-          the backend with NestJS, Node.js, PostgreSQL, and Redis — enabling me to design and ship
-          full-stack, production-ready products end to end.
+          the backend with NestJS, Node.js, PostgreSQL, and Redis — enabling me to design and ship full-stack,
+          production-ready products end to end.
         </p>
         <p className="hover-wrapper text-justify">
           Based in Tokyo on a Student Visa (fully eligible to transition to an
