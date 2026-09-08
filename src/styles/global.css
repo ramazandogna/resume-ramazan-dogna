@@ -288,6 +288,13 @@ h3 {
   }
 }
 
+/* Justified monospace tears open on narrow screens */
+@media (max-width: 640px) {
+  .text-justify {
+    text-align: left;
+  }
+}
+
 /* On small screens the lift is distracting and the blur costs frames */
 @media (max-width: 768px) {
   .hover-wrapper {
