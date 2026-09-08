@@ -13,7 +13,7 @@ export default function Project({ projectIndex }: ProjectProps) {
       <h3>{project.title}</h3>
       <div className="sub-hover-container flex flex-col gap-1">
         <p className="sub-hover">{project.description}</p>
-        <span className="sub-hover text-13px">
+        <span className="sub-hover text-13px flex flex-wrap items-center gap-x-5 gap-y-1">
           {project.linkUrl ? (
             <a
               className="link-effect text-[var(--ink-soft)]"
@@ -25,6 +25,16 @@ export default function Project({ projectIndex }: ProjectProps) {
             </a>
           ) : (
             <span className="text-[var(--muted)]">No Public Link</span>
+          )}
+          {project.demoUrl && (
+            <a
+              className="link-effect text-[var(--ink-soft)]"
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {project.demoText}
+            </a>
           )}
         </span>
       </div>
