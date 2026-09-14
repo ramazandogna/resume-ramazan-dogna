@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import Badge from '../../ui/Badge';
+import Lightbox from '../../ui/Lightbox';
 import { projectsData } from '../../../data/data';
 
 interface ProjectProps {
@@ -7,9 +9,23 @@ interface ProjectProps {
 
 export default function Project({ projectIndex }: ProjectProps) {
   const project = projectsData[projectIndex];
+  const [open, setOpen] = useState(false);
 
   return (
     <div className="flex flex-col gap-2">
+      {project.image && (
+        <button
+          type="button"
+          className="project-shot"
+          onClick={() => setOpen(true)}
+          aria-label={`Enlarge screenshot of ${project.title}`}
+        >
+          <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
+        </button>
+      )}
+      {open && project.image && (
+        <Lightbox src={project.image} alt={project.title} onClose={() => setOpen(false)} />
+      )}
       <h3>{project.title}</h3>
       <div className="sub-hover-container flex flex-col gap-1">
         <p className="sub-hover">{project.description}</p>

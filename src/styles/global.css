@@ -329,3 +329,137 @@ h3 {
     transform: none;
   }
 }
+
+/* ==========================================================================
+   Project screenshots — same grey restraint as the badges; colour on focus
+   ========================================================================== */
+.project-shot {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  margin-bottom: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-image);
+  box-shadow: 0 0 0 1px var(--line);
+  background-color: var(--surface-sunken);
+  cursor: zoom-in;
+}
+
+.project-shot img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  filter: grayscale(1) opacity(0.7);
+  transition:
+    filter 0.35s var(--ease),
+    transform 0.5s var(--ease);
+}
+
+.hover-wrapper:hover .project-shot img {
+  filter: grayscale(0) opacity(1);
+}
+
+.project-shot:hover img {
+  transform: scale(1.015);
+}
+
+.project-shot:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4vh 4vw;
+  background-color: rgba(22, 24, 29, 0.78);
+  backdrop-filter: blur(6px);
+  cursor: zoom-out;
+  animation: lightboxFade 0.22s var(--ease);
+}
+
+.lightbox__frame {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: min(1400px, 100%);
+  max-height: 100%;
+  cursor: default;
+  animation: lightboxRise 0.28s var(--ease);
+}
+
+.lightbox__img {
+  max-width: 100%;
+  max-height: calc(92vh - 40px);
+  object-fit: contain;
+  border-radius: var(--radius-card);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 30px 60px -20px rgba(0, 0, 0, 0.6);
+}
+
+.lightbox__caption {
+  color: #d4d4d8;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-item);
+  background-color: #232629;
+  color: #f4f4f5;
+  font-size: 22px;
+  line-height: 1;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.lightbox__close:hover {
+  background-color: #16181d;
+}
+
+@keyframes lightboxFade {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes lightboxRise {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+}
+
+/* Touch screens have no hover: show screenshots in colour */
+@media (max-width: 768px) {
+  .project-shot img {
+    filter: none;
+  }
+  .lightbox {
+    padding: 1rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-shot img,
+  .lightbox,
+  .lightbox__frame {
+    transition: none;
+    animation: none;
+  }
+}
