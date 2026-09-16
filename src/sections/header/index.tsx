@@ -1,5 +1,7 @@
 import { icons } from '../../assets/Icons/icons';
-import profileImage from '../../assets/images/ramazan-vesika-son.jpg';
+import profileImage from '../../assets/images/ramazan-vesika-son.webp';
+import { portraitPlaceholder } from '../../assets/images/placeholder';
+import BlurImage from '../../components/ui/BlurImage';
 
 export default function Header() {
   return (
@@ -79,11 +81,14 @@ export default function Header() {
 
         {/* Right Column: Profile Image */}
         <div className="flex justify-center md:justify-end">
-          <img
-            src={profileImage}
-            alt="Ramazan Doğan"
-            className="w-40 h-48 md:w-44 md:h-52 object-cover rounded-[var(--radius-image)] border border-[var(--line)]"
-          />
+          <div className="portrait relative w-40 h-48 md:w-44 md:h-52 rounded-[var(--radius-image)] overflow-hidden border border-[var(--line)]">
+            <BlurImage
+              src={profileImage}
+              placeholder={portraitPlaceholder}
+              alt="Ramazan Doğan"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
     </section>
