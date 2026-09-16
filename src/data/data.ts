@@ -1,10 +1,11 @@
-import hibiShot from '../assets/apps/cv-hibi.png';
-import kakehashiShot from '../assets/apps/cv-kakehashi.png';
-import kakeiShot from '../assets/apps/cv-kakei-ss.png';
-import localSalesShot from '../assets/apps/cv-local-sale-system.png';
-import marketplaceShot from '../assets/apps/cv-online-sales.png';
-import reiKitShot from '../assets/apps/cv-rei-kit-ss.png';
-import scrapeShot from '../assets/apps/cv-scrape-and-compare.png';
+import { appShotPlaceholders } from '../assets/apps/placeholders';
+import hibiShot from '../assets/apps/cv-hibi.webp';
+import kakehashiShot from '../assets/apps/cv-kakehashi.webp';
+import kakeiShot from '../assets/apps/cv-kakei-ss.webp';
+import localSalesShot from '../assets/apps/cv-local-sale-system.webp';
+import marketplaceShot from '../assets/apps/cv-online-sales.webp';
+import reiKitShot from '../assets/apps/cv-rei-kit-ss.webp';
+import scrapeShot from '../assets/apps/cv-scrape-and-compare.webp';
 
 export default interface ExperienceType {
   company: string;
@@ -143,6 +144,7 @@ interface Project {
   demoText?: string;
   demoUrl?: string;
   image?: string;
+  imageBlur?: string;
   technologies: {
     name: string;
     variant: BadgeVariant;
@@ -153,6 +155,7 @@ export const projectsData: Project[] = [
   {
     title: 'rei-kit — Vue 3 Design System & Shared Runtime',
     image: reiKitShot,
+    imageBlur: appShotPlaceholders['cv-rei-kit-ss'],
     description:
       "零 — the shared layer extracted out of Hibi once it proved portable: thirteen components, six composables, eight utilities, design tokens and a generic i18n runtime, with Supabase behind its own entry point so apps that skip it never download it. Published to npm with provenance and guarded by a release job that runs a real consumer app's checks before anything ships.",
     linkText: 'View on GitHub',
@@ -172,6 +175,7 @@ export const projectsData: Project[] = [
   {
     title: 'Kakehashi — Japanese Course for Turkish Speakers',
     image: kakehashiShot,
+    imageBlur: appShotPlaceholders['cv-kakehashi'],
     description:
       '架け橋 ("the bridge") — a Japanese course that follows the order a language school in Japan actually teaches: the day\'s kanji first, then the words written with those kanji, then the grammar built from those words, then an exam over all of it. 86 days across Kana, N5 and N4, with 414 characters, 1,362 words, 103 grammar points and 2,205 exam questions. Vocabulary is not dealt out evenly — a word lands on the day by which every character in it has been taught, so day two of the alphabet course can already be read rather than recognised. Access is enforced in the database, not the client: a day you have not reached returns no rows at all, exam answers have row-level security on with no read policy, and the grants are cut back to least privilege (55 RLS assertions run in CI).',
     linkText: 'Open the app',
@@ -190,6 +194,7 @@ export const projectsData: Project[] = [
   {
     title: 'Hibi — Habit & Mood Tracker (PWA)',
     image: hibiShot,
+    imageBlur: appShotPlaceholders['cv-hibi'],
     description:
       'ひび ("days") — a habit and mood tracker built around three kinds of habit (build, quit, and a 1–5 scale), where every mark can carry a note and the year reads back as a 365-square heatmap. An installable, offline-capable PWA on Vue 3 and Supabase (Postgres + RLS), in four languages, with morning and evening Web Push reminders delivered by a scheduled Postgres job calling an Edge Function — so they arrive with every tab closed.',
     linkText: 'View on GitHub',
@@ -211,6 +216,7 @@ export const projectsData: Project[] = [
   {
     title: 'Kakei — Personal Finance Tracker (PWA)',
     image: kakeiShot,
+    imageBlur: appShotPlaceholders['cv-kakei-ss'],
     description:
       '家計 ("household accounts") — a money tracker built so the month\'s reckoning is the product: an entry takes under five seconds at the till, and the Month screen prints the sentence that matters ("Konbini · ¥10,000 → ¥8,000 · 20% less"). Month, Ledger, Insights and Profile screens over Vue 3 and Supabase with row-level security, plus fixed monthly entries, five currencies and a configurable month start day for anyone budgeting from payday.',
     linkText: 'View on GitHub',
@@ -231,6 +237,7 @@ export const projectsData: Project[] = [
   {
     title: 'Scrape & Compare — AI-Powered Job Matching Engine',
     image: scrapeShot,
+    imageBlur: appShotPlaceholders['cv-scrape-and-compare'],
     description:
       'An automated, AI-driven platform that scrapes job boards and scores each listing 0–100 against a candidate profile using Google Gemini. I built an asynchronous background-processing microservice with BullMQ and Redis to orchestrate scraping and AI-scoring batches, plus adaptive backoff and dynamic pagination to bypass bot detection (50+ listings per run).',
     linkText: 'View on GitHub',
@@ -250,6 +257,7 @@ export const projectsData: Project[] = [
   {
     title: 'Local Sales System — Offline-First POS & Digital Ordering',
     image: localSalesShot,
+    imageBlur: appShotPlaceholders['cv-local-sale-system'],
     description:
       'An offline-first Point-of-Sale and digital ordering system for local Japanese restaurants — guests order from a table QR while staff run the floor from a live dashboard, all over the restaurant LAN with no cloud required. I designed a monorepo deployable as an Electron desktop app or a single Docker image, with real-time bidirectional sync over Socket.IO and an Ed25519-signed, machine-bound offline licensing system.',
     linkText: 'View on GitHub',
@@ -267,6 +275,7 @@ export const projectsData: Project[] = [
   {
     title: 'Japanese C2C Second-Hand Marketplace',
     image: marketplaceShot,
+    imageBlur: appShotPlaceholders['cv-online-sales'],
     description:
       'A Japanese-first customer-to-customer marketplace (inspired by Mercari) where every listing is a fast, server-rendered, structured-data-rich page in four languages. Focused on technical SEO, i18n routing, and page speed, with a media pipeline on Cloudflare R2 + ThumbHash and PostgreSQL full-text search. The full stack runs on a single VPS via Docker Compose.',
     linkText: 'View on GitHub',

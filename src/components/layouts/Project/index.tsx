@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Badge from '../../ui/Badge';
 import Lightbox from '../../ui/Lightbox';
+import Screenshot from '../../ui/Screenshot';
 import { projectsData } from '../../../data/data';
 
 interface ProjectProps {
@@ -14,14 +15,12 @@ export default function Project({ projectIndex }: ProjectProps) {
   return (
     <div className="flex flex-col gap-2">
       {project.image && (
-        <button
-          type="button"
-          className="project-shot"
-          onClick={() => setOpen(true)}
-          aria-label={`Enlarge screenshot of ${project.title}`}
-        >
-          <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
-        </button>
+        <Screenshot
+          src={project.image}
+          placeholder={project.imageBlur}
+          alt={project.title}
+          onOpen={() => setOpen(true)}
+        />
       )}
       {open && project.image && (
         <Lightbox src={project.image} alt={project.title} onClose={() => setOpen(false)} />
