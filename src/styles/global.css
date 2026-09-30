@@ -502,3 +502,86 @@ h3 {
     animation: none;
   }
 }
+
+/* ==========================================================================
+   Call-to-action buttons (/freelance)
+   Same graphite tone and radius hierarchy as the download button.
+   ========================================================================== */
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.15rem;
+  border-radius: var(--radius-image);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  color: #f4f4f5;
+  background-color: #232629;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.06) inset,
+    0 10px 26px -14px rgba(22, 24, 29, 0.55);
+  transition:
+    transform 0.25s var(--ease),
+    box-shadow 0.25s var(--ease),
+    background-color 0.25s var(--ease),
+    color 0.25s var(--ease);
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  background-color: #16181d;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+    0 16px 32px -14px rgba(22, 24, 29, 0.6);
+}
+
+.cta:active {
+  transform: translateY(0);
+}
+
+.cta:focus-visible {
+  outline: 2px solid #232629;
+  outline-offset: 3px;
+}
+
+/* Secondary: the same shape, drawn in outline instead of fill. */
+.cta--ghost {
+  color: var(--ink-soft);
+  background-color: transparent;
+  box-shadow: 0 0 0 1px var(--line);
+}
+
+.cta--ghost:hover {
+  color: var(--ink);
+  background-color: var(--surface-sunken);
+  box-shadow: 0 0 0 1px var(--ink-soft);
+}
+
+/* Step number in "How I work" — quiet, monospaced, never competing with the title. */
+.step-number {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .cta {
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cta {
+    transition: none;
+  }
+
+  .cta:hover {
+    transform: none;
+  }
+}
