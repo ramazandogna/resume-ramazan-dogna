@@ -136,7 +136,9 @@ export const experienceData: ExperienceType[] = [
   }
 ];
 
-interface Project {
+export interface Project {
+  /** Stable key so other pages can pick projects without matching on title. */
+  id: string;
   title: string;
   description: string;
   linkText?: string;
@@ -153,6 +155,7 @@ interface Project {
 
 export const projectsData: Project[] = [
   {
+    id: 'rei-kit',
     title: 'rei-kit — Vue 3 Design System & Shared Runtime',
     image: reiKitShot,
     imageBlur: appShotPlaceholders['cv-rei-kit-ss'],
@@ -173,6 +176,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'kakehashi',
     title: 'Kakehashi — Japanese Course for Turkish Speakers',
     image: kakehashiShot,
     imageBlur: appShotPlaceholders['cv-kakehashi'],
@@ -192,6 +196,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'hibi',
     title: 'Hibi — Habit & Mood Tracker (PWA)',
     image: hibiShot,
     imageBlur: appShotPlaceholders['cv-hibi'],
@@ -214,6 +219,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'kakei',
     title: 'Kakei — Personal Finance Tracker (PWA)',
     image: kakeiShot,
     imageBlur: appShotPlaceholders['cv-kakei-ss'],
@@ -235,6 +241,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'scrape-and-compare',
     title: 'Scrape & Compare — AI-Powered Job Matching Engine',
     image: scrapeShot,
     imageBlur: appShotPlaceholders['cv-scrape-and-compare'],
@@ -255,6 +262,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'local-sales-system',
     title: 'Local Sales System — Offline-First POS & Digital Ordering',
     image: localSalesShot,
     imageBlur: appShotPlaceholders['cv-local-sale-system'],
@@ -273,6 +281,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'marketplace',
     title: 'Japanese C2C Second-Hand Marketplace',
     image: marketplaceShot,
     imageBlur: appShotPlaceholders['cv-online-sales'],
@@ -291,6 +300,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'interview-prep',
     title: 'Full-Stack Interview Prep Playground',
     description:
       'A hands-on, read-every-line playground of seven small but real projects — HTML/a11y, JavaScript core, Vue, React 19, Next.js 15, Node/Express, and NestJS — where every non-obvious line is commented with the trade-off and the interview question behind it. Built as a senior-level full-stack interview preparation resource.',
@@ -307,6 +317,7 @@ export const projectsData: Project[] = [
     ]
   },
   {
+    id: 'nihongo-grammar',
     title: 'Nihongo Grammar — JLPT N5 & N4 Study Guide',
     description:
       'A single-file, offline-friendly Japanese study guide for JLPT N5 & N4, bringing grammar, kanji, vocabulary, and interactive quizzes together in one place with furigana readings and example sentences. Built with vanilla HTML, CSS, and JavaScript — no framework, no build step — including a custom quiz engine with a timer, progress bar, and scored results.',

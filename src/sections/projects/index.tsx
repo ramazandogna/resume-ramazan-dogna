@@ -7,9 +7,9 @@ export default function Projects() {
     <section className="flex flex-col gap-2">
       <SectionTitle title="Projects" />
       <div className="hover-container flex flex-col gap-4">
-        {projectsData.map((_, index) => (
-          <div key={index} className="hover-wrapper text-justify">
-            <Project projectIndex={index} />
+        {projectsData.map((project) => (
+          <div key={project.id} className="hover-wrapper text-justify">
+            <Project project={project} />
           </div>
         ))}
       </div>

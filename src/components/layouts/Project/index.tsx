@@ -2,14 +2,13 @@ import { useState } from 'react';
 import Badge from '../../ui/Badge';
 import Lightbox from '../../ui/Lightbox';
 import Screenshot from '../../ui/Screenshot';
-import { projectsData } from '../../../data/data';
+import type { Project as ProjectType } from '../../../data/data';
 
 interface ProjectProps {
-  projectIndex: number;
+  project: ProjectType;
 }
 
-export default function Project({ projectIndex }: ProjectProps) {
-  const project = projectsData[projectIndex];
+export default function Project({ project }: ProjectProps) {
   const [open, setOpen] = useState(false);
 
   return (
